@@ -14,6 +14,6 @@ username="$3"
 path_to_ssh_key="$4"
 
 # Transfer the file using scp
-scp -i "$~/.ssh/school" -o StrictHostKeyChecking=no "$path_to_file" "$ubuntu@$52.86.248.138":~/
+scp -i "$path_to_ssh_key" -o StrictHostKeyChecking=no "$path_to_file" "$username@$ip":~/
 
 
