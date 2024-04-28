@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 # This script installs nginx on a new Ubuntu machine and configures it to meet the specified requirements.
 
-# Install nginx silently
-apt-get update -y
-apt-get install nginx -y
-
-# Configure nginx to listen on port 80 and return "Hello World!" at root
-echo "Hello World!" > /var/www/html/index.html
-
-# Restart nginx
-service nginx restart
-
-
+# installs nginx and changes default html file
+apt-get -y update
+apt-get -y install nginx
+echo 'Hello World!' > /var/www/html/index.html
+service nginx start
